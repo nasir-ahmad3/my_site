@@ -1,0 +1,40 @@
+{% load static %}
+<!-- projects -->
+<section class="projects">
+	<a href="{% url 'projects:ProjectList' %}" id="projects"><h1 class="title">projects</h1></a>
+	<div class="projects-wrapper">
+		{% for project in projec_list %}
+			<div class="project">
+				<div class="img" style="background-image: url('{{project.thumbnail.url}}');"></div>
+				<div class="logo" style="background-image: url(
+					{% if project.language_type == 'h' %}
+						{% static 'base/assetss/images/html_logo.png' %}
+					{% elif project.language_type == 'c' %}
+						{% static 'base/assetss/images/css_logo.png' %}
+					{% elif project.language_type == 'j' %}
+						{% static 'base/assetss/images/js_logo.png' %}
+					{% elif project.language_type == 'p' %}
+						{% static 'base/assetss/images/python_logo.png' %}
+					{% elif project.language_type == 'b' %}
+						{% static 'base/assetss/images/bootstrap_logo.png' %}
+					{% elif project.language_type == 'd' %}
+						{% static 'base/assetss/images/django_logo.png' %}
+					{% else %}
+						{% static 'base/assetss/images/html_logo.png' %}
+					{% endif %}
+				);
+				border: solid #fff 5px;"></div>
+				<div class="content">
+					<h1 class="title" >{{project.title}}</h1>
+					<p class="description">{{project.description|truncatewords:30}}</p>
+					<a href="{% url 'projects:ProjectDetail' project.slug %}" target="_blank" class='download-btn'>preview</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	{% if request.get_full_path == '/' %}
+		<a href="{% url 'projects:ProjectList' %}" class="show-more">More Projects</a>
+	{% endif %}
+	
+</section>
+<!-- /projects -->

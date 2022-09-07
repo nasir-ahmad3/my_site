@@ -1,0 +1,20 @@
+<!-- about me -->
+<a id="about-me"></a>
+<section class="about_me">
+	<h1 id="title" class="header">about me</h1>
+	{% for about in about_list %}
+		<div class="container">
+			<div class="image-container">
+				<img id="image" src="{{about.pictuer.url}}" alt="{{about.name}}">
+			</div>
+			<p id="name">{{about.name}}</p>
+			<div id="job">{{about.job}}</div>
+			<p id="main-text"> 
+				{{about.about_my_self}}
+			</p>
+			<br>
+			<div class="btn-random"><a href="{% url 'about:cv' %}">MY_CV</a></div>
+		</div>
+	{% endfor %}
+</section>
+<!-- /about me -->

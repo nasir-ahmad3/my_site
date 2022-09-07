@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<!-- ---------------------------------------------- styles ------------------------------------------ -->
+	<link rel="stylesheet" href="{% static 'base/assetss/css/main.css' %}">
+	<!-- ----------------------------------------------------------------------------------------------------- -->
+	<title>NASIR_AHMADY_AHMADY</title>
+</head>
+<body>
+	<!-- The Site Navigation -->
+	<nav>
+		<div class="left">
+			<div class="button-menu">Menu</div>
+			<ul>
+				<li>
+					<a href="{% url 'base:home' %}">Home</a>
+				</li>
+				<li>
+					<a href="{% url 'projects:ProjectList' %}">projects</a>
+				</li>
+				<li>
+					<a href="{% url 'base:home' %}">Skills</a>
+				</li>
+				<li>
+					<a href="{% url 'base:home' %}">about me</a>
+				</li>
+				<li>
+					<a href="{% url 'base:home' %}">contact</a>
+				</li>
+			</ul>
+		</div>
+		<div class="right">
+			<div class="logo" style="background-image: url({% static 'base/assetss/images/per.jpg' %});"></div>
+		</div>
+	</nav>
+	<!-- /nav  -->
+	<a id="home"></a>
+	<!-- the site header -->
+	<div class="header" style="background-image: url({% static 'base/assetss/images/bg.jpg' %});">
+		<div class="title">
+			<p class="text">hello, i'm</p>
+			<h1 class="title">nasir ahmad ahmdy.</h1>
+			<div class="sub-title">i am the web developer.</div>
+		</div>
+	</div>
+	<!-- /the site header -->
+	{% block main %}{% endblock %}
+	<!-- the footer -->
+	<div class="footer">
+		<ul>
+			<li>
+				<a href="#"><i class="fab fa-facebook"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="fab fa-whatsapp"></i></a>
+			</li>
+		</ul>
+	</div>
+	<!-- /the footer -->
+	<!-- ------------------------------------------------- main js ---------------------------------------- -->
+	<script src="{% static 'base/assetss/js/script.js' %}"></script>
+</body>
+</html>

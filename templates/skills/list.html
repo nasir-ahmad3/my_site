@@ -1,0 +1,19 @@
+<!-- skill bar -->
+<section class="skills">
+<a id="skills"></a>
+	<div class="skill-wrapper">
+	<h1 class="title">My Skills</h1>
+	<div class="skills">
+		{% for skill in skill_list %}
+			<div class="skill">
+				<div class="show">
+					<div class="line"></div>
+					<div class="num"  style="--num:{{skill.learn_presentage}}%;"><p>{{skill.learn_presentage}}%</p></div>
+				</div>
+				<div class="name">{{skill.title}}</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+</section>
+<!-- /skill bar -->

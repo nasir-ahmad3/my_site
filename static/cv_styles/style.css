@@ -1,0 +1,241 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: sans-serif;
+	background-color: #41d2d5;
+	padding: 50px 0;
+}
+.wrapper{
+	width: 1050px;
+	display: flex;
+	flex-direction: row;
+	background-color: #fff;
+	box-sizing: 10px 10px 50px rgba(0, 0, 0, 0.25);
+}
+.wrapper .left{
+	padding: 40px;
+	width: 350px;
+	background-color: #00344b;
+	color: #fff;
+}
+.left .per{
+	text-align: center;
+}
+.left .per .per-img{
+	width: 150px;
+	height: 150px;
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+	margin: auto;
+}
+.left .per .per-name{
+	font-size: 23px;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+.left .per .pre-job{
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.wrapper > .left > hr{
+	border: none;
+	height: 1px;
+	background-color: #ffffff52;
+	margin-bottom: 25px;
+
+}
+.left > .contact-info{
+
+
+}
+.contact-info .contact-title{
+	text-transform: uppercase;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.contact-info  div{
+	margin: 10px 0;
+}
+.contact-info  div i{
+	color: #008dc7;
+	margin-right: 10px;
+}
+.education > .edu{
+	margin: 20px 0;
+}
+.education > .edu > div{
+	margin: 5px;
+	text-transform: capitalize;
+}
+.education > .edu > .year{
+	color: #008dc7;
+}
+.lang-wrapper{
+	margin-bottom: 30px;
+}
+.lang-wrapper  > .title{
+	text-transform: uppercase;
+	font-size: 25px;
+}
+.lang-wrapper .lang{
+	margin: 10px 0;
+}
+.lang-wrapper .lang .title{
+	text-transform: capitalize;
+	font-size: 14px;
+}
+.lang-wrapper .lang .show{
+	width: 100%;
+	height: 10px;
+	background-color: #001620;
+}
+.lang-wrapper .lang .show .line{
+	background-color: #008dc7;
+	width: var(--per);
+	height: 10px;
+}
+.wrapper .right{
+	width: 641px;
+	padding: 40px 20px;
+}
+.right .profile .title{
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.right .profile .content{
+	color: #878787;
+	margin-bottom: 50px;
+}
+.right .expreience .title{
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+.expreience .exp-wrapper .exp{
+	display: flex;
+}
+.expreience .exp-wrapper .exp .left{
+	padding: 0;
+	margin: 5px 0 0 0;
+	background-color: transparent;
+	color: #878787;
+}
+.expreience .exp-wrapper .exp .left > div{
+	margin-bottom: 3px;
+}
+.expreience{
+	margin-bottom: 30px;
+}
+.expreience .exp-wrapper .exp {
+	margin-bottom: 20px;
+}
+.expreience .exp-wrapper .exp .right{
+	padding: 0;
+	margin: 0;
+}
+.expreience .exp-wrapper .exp .right .title{
+	margin: 0 0 10px 0;
+	color: #008dc7;
+	font-weight: bold;
+
+}
+.expreience .exp-wrapper .exp .right {
+	color: #878787;
+}
+.skills{
+	margin-bottom: 40px;
+}
+.skills > .title{
+	text-transform: uppercase;
+}
+.skills .skill-wrapper .skill{
+	width: 100%;
+	display: flex;
+	margin: 15px 0;
+	align-items: center;
+}
+.skills .skill-wrapper .skill .name{
+	width: 200px;
+	text-transform: uppercase;
+	color: #878787;
+}
+.skills .skill-wrapper .skill .show{
+	width: 100%;
+	height: 10px;
+	background-color: #e4e4e4;
+}
+.skills .skill-wrapper .skill .show .line{
+	height: 100%;
+	width: var(--per);
+	background-color: #008dc7;
+}
+.interest .title{
+	text-transform: uppercase;
+}
+.interest ul{
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+.interest ul > li{
+	list-style: none;
+	text-transform: capitalize;
+	margin: 10px 50px;
+}
+.interest ul > li > i{
+	margin-right: 5px;
+	color: #008dc7;
+}
+/*--------------------------- now make it responsive ---------------------------------------------*/
+@media (max-width: 1050px){
+	body{
+		padding: 50px;
+	}
+	.wrapper{
+		flex-direction: column;
+		width: 100%;
+	}	
+	.wrapper > .left{
+		width: 100%;
+	}
+	.wrapper > .right{
+		width: 100%;
+	}
+}
+@media (max-width: 650px){
+	.expreience .exp-wrapper .exp {
+	    flex-direction: column;
+	}
+	.expreience .exp-wrapper .exp .left {
+		margin-bottom: 10px;
+	}
+	.expreience .exp-wrapper .exp .right {
+	    width: 100%;
+	}
+	.expreience .exp-wrapper .exp .right p.title {
+	    margin-bottom: 3px !important;
+	}
+	.skill {
+	    flex-direction: column;
+	    align-items: flex-start !important;
+	}
+	.skills .skill-wrapper .skill .name {
+		width: initial;
+		margin-bottom: 5px;
+	}
+}
+@media (max-width: 400px){
+	body{
+		padding: 0;
+	}
+}

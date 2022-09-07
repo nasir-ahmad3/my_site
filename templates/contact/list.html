@@ -1,0 +1,53 @@
+<!-- contact us -->
+	<a id="contact-us"></a>
+	<section class="contact-us">
+		<h1 class="title">contact us</h1>
+		<p style="text-transform: capitalize;">you can also contact me with nasirahmadahmady0@gmail.com imail.</p>
+		<div class="contact">
+				<div class="contant-info">
+					<h1 class="title">contact info</h1>
+					<div class="address">
+						<i class="icon ion-location"></i>
+						<div class="text">
+							<p class="title">address</p>
+							<p class="des">{{contact.address}}</p>
+						</div>
+					</div>
+					<div class="phone">
+						<i class="icon ion-android-call"></i>
+						<div class="text">
+							<p class="title">phone</p>
+							<p class="des">{{contact.phone_number}}</p>
+						</div>
+					</div>
+					<div class="email">
+						<i class="icon ion-email"></i>
+						<div class="text">
+							<p class="title">email</p>
+							<p class="des">{{contact.email}}</p>
+						</div>
+					</div>
+				</div>
+			<div class="message">
+				<form method="post">{% csrf_token %}
+					<h1>message me</h1>
+					<div class="name">
+						{{ form.name }}
+					</div>
+					<div class="email">
+						{{ form.email }}
+					</div>
+					<div class="inquiry">
+						{{ form.inquiry }}
+					</div>
+					<div class="your-message">
+						{{ form.message }}
+					</div>
+					<button type="submit">
+						send
+					</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- /contact us -->
